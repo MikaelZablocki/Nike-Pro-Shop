@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NikeProShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<header>
+    <div class="logo-box">
+    <img class="logo" src="./Img/Nike-logo-clean.png" alt="NikeLogo">
+    </div>
+     <input type="checkbox" name="bar-check" class="bars-check" id="bars-check1">
+        <img class="bar" src="./Img/bars-solid.svg" alt="bars" width="10%">
+        <img class="times" src="./Img/times-solid.svg" alt="times" width="10%">
+    <nav>
+        <ul>
+            <li><a href="./index.html" target="_blank" rel="noopener noreferrer">FORSIDE</a></li>
+            <li><a href="./Historien.html" target="_blank" rel="noopener noreferrer">HISTORIEN OM NIKE</a></li>
+            <li><a href="./Om.html" target="_blank" rel="noopener noreferrer">OM NIKE PRO SHOP</a></li>
+            <li><a href="./Kontakt.html" target="_blank" rel="noopener noreferrer">KONTAKT OS</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+      <section>
+        <div class="mySlides fade">
+     <img src="./Img/Slideshow-image-1.jpg" alt="slide1" width="100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="./Img/Slideshow-image-2.jpg" alt="slide2" width="100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./Img/Slideshow-image-3.jpg" alt="slide3" width="100%">
+    </div>
+
+    <div class="dots" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</section>
+
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+    <article>
+        <div class="textA">
+        <p>Nike har siden deres spæde begyndelse i Oregon, været symbolet på innovation indenfor sportsverdenen.</p>
+    </div>
+    <div class="textB" >
+        <p>Fra løbesko til fodboldstøvler, over golfbolde og til snowboardtøj dækker de efterhånden hele paletten. 
+            Her hos Nike Pro Shop fokuserer vi selvfølgelig på Nike sko og sneakers, men vi forsøger også at snige lidt apparel ind i udvalget, når vi finder gode basic styles.</p>
+        </div>
+        <div class="textC">
+            <p>I det hele taget gør vi alt hvad vi kan for at holde vores udvalg opdateret med de bedste styles fra Nike, både hvad angår deres innovative teknologier og populære silhuetter som P-6000, Air Max, VaporMax og den voksende Ultra serie, men vi forsøger også altid at have de vigtigste klassikere på vores hylder, som Air Force, Cortez, React Element og Pegasus.</p>
+        </div>
+    </article>
+   <ul>
+    <div>
+    <img src="./Img/Nike-aqua.jpg" alt="aqua">
+    <p>Nike Aqua</p>
+    <img src="./Img/Nike-aquamarine.jpg" alt="aquamarine">
+    <p>Nike Aquamarine</p>
+    <img src="./Img/Nike-bauhaus.jpg" alt="bauhaus">
+    <p>Nike Bauhaus</p>
+</div>
+<div>
+    <img src="./Img/Nike-blackwhite.jpg" alt="blackwhite">
+    <p>Nike Black/White</p>
+    <img src="./Img/Nike-greenyellow.jpg" alt="greenyellow">
+    <p>Nike Green/Yellow</p>
+    <img src="./Img/Nike-orange.jpg" alt="orange">
+    <p>Nike Orange</p>
+</div>
+<div>
+    <img src="./Img/Nike-pastel.jpg" alt="pastel">
+    <p>Nike Pastel</p>
+    <img src="./Img/Nike-rainbow.jpg" alt="rainbow">
+    <p>Nike Rainbow</p>
+    <img src="./Img/Nike-whitered.jpg" alt="withered">
+    <p>Nike White/Red</p>
+</div>
+   </ul>
+</main>
+<footer>
+    <section>
+    <h1>Nike Pro Shop Stores</h1>
+    <div class="mini-header">
+    <p>København</p>
+</div>
+<ul>
+    <li>Rådhusstræde 6, st.</li>
+    <li>1466 København K</li>
+</ul>
+    <div class="mini-header">
+    <p>Aarhus</p>
+</div>
+<ul>
+    <li>Søndergade 70</li>
+    <li>8000 Aarhus</li>
+</ul>
+    <div class="mini-header">
+    <p>Odense</p>
+</div>
+<ul>
+    <li>Vestergade 23</li>
+    <li>5000 Odense</li>
+</ul>
+</section>
+<section>
+    <h2>Åbningstider:</h2>
+    <ul>
+        <li>Mandag - fredag: 10:00 - 18:00</li>
+        <li>Lørdag: 10:00 - 13:00</li>
+    </ul>
+    <ul class="ulA">
+        <li>Telefon: (+45) 33 91 18 18</li>
+        <li>E-mail: online@NikeProShop.dk</li>
+    </ul>
+</section>
+<section class="sectionC">
+    <h3>Nike Pro Shop på de sociale medier:</h3>
+    <div class="img-container">
+        <div>
+       <img src="./Img/FacebookIcon.png" alt="Facebook" width="80%"> 
+    </div>
+    <div>
+       <img src="./Img/InstagramIcon.png" alt="Instagram" width="80%"> 
+    </div>
+    <div>
+       <img src="./Img/TwitterIcon.png" alt="Twitter" width="80%"> 
+    </div>
+</div>
+<div class="bottom">
+    <a href="./Kontakt.html" target="_blank" rel="noopener noreferrer">Kontakt</a>
+           <a href="./Om.html" target="_blank" rel="noopener noreferrer">Om Nike Pro Shop</a>
+        </div>
+</section>
+</footer>
+</body>
+
+</html>
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NikeProShop</title>
+    <link rel="stylesheet" href="Kontakt.css">
+</head>
+
+<body>
+    
+<header>
+    <div class="logo-box">
+        <img class="logo" src="./Img/Nike-logo-clean.png" alt="NikeLogo">
+        </div>
+     <input type="checkbox" name="bar-check" class="bars-check" id="bars-check1">
+        <img class="bar" src="./Img/bars-solid.svg" alt="bars" width="10%">
+        <img class="times" src="./Img/times-solid.svg" alt="times" width="10%">
+    <nav>
+        <ul>
+            <li><a href="./index.html" target="_blank" rel="noopener noreferrer">FORSIDE</a></li>
+            <li><a href="./Historien.html" target="_blank" rel="noopener noreferrer">HISTORIEN OM NIKE</a></li>
+            <li><a href="./Om.html" target="_blank" rel="noopener noreferrer">OM NIKE PRO SHOP</a></li>
+            <li><a href="./Kontakt.html" target="_blank" rel="noopener noreferrer">KONTAKT OS</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="slider">
+
+    <div class="mySlides fade">
+ <img src="./Img/Slideshow-image-1.jpg" alt="slide1" width="100%">
+</div>
+
+<div class="mySlides fade">
+    <img src="./Img/Slideshow-image-2.jpg" alt="slide2" width="100%">
+</div>
+
+<div class="mySlides fade">
+    <img src="./Img/Slideshow-image-3.jpg" alt="slide3" width="100%">
+</div>
+
+<div class="dots" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</section>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+   <!-- Main starter her -->
+
+   <main>
+    <article>
+        <h1>Kundeservice</h1>
+        <section>
+<img src="./Img/History-of-Nike.jpg" alt="HistoryNike">
+<section>
+    <p>Vi sidder klar ved telefonen samt chatsupport alle ugens dage, hvis du skulle have brug for hjælp.</p>
+    <ul>
+        <li>Vores åbningstider på telefonen er:</li>
+        <li>Mandag-Fredag: 9-18</li>
+        <li>Lørdag-Søndag: 10-14</li>
+    </ul>
+    <p>Har du brug for vores hjælp uden for dette tidsrum, er du meget velkommen til at sende os en mail eller efterlade en besked i den røde boks nede i højre hjørne. Vi glæder os til at høre fra dig.</p>
+    <ul>
+        <li>Telefon: (+45) 33 91 18 18</li>
+        <li>E-mail: online@NikeProShop.dk</li>
+    </ul>
+</section>
+        </section>
+        <h2>Fortrydelsesret</h2>
+        <p>Du har 30 dages fortrydelsesret. Det gør sig både gældende ved køb i vores fysiske shops og på vores webshop. Fortrydelsesretten løber fra den dag, du foretager dit køb i butikken eller modtager din webordre.</p>
+        <h3>Bytte- og returregler</h3>
+        <section class="list-icons">
+        <ul>
+            <li>Bytteret på alle varer i op til 180 dage</li>
+            <li>Fuld returret på alle varer i op til 30 dage</li>
+            <li>Alle varer som er købt online, kan sendes gratis retur med vedlagt returlabel</li>
+            <li>Alle varer som er købt online, kan også byttes/returneres i vores fysiske butikker*</li>
+        </ul>
+        <p>*Det er kun muligt at returnere/ombytte en vare i Magasin, hvis den oprindeligt blev købt der.</p>
+    </section>
+    <section class="last-text">
+    <h4>Gratis retur</h4>
+    <p>Vi vedlægger altid en gratis returlabel i alle vores forsendelser i Danmark, så du helt uden omkostninger kan sende din webordre retur til vores lager, hvis varerne mod forventning ikke skulle passe dig. Du klistrer blot returlabelen på den kasse (ikke den originale skoæske), du modtog varerne i og afleverer pakken hos din lokale pakkeshop eller postbutik.</p>
+    <p>*Husk at få en kvittering for indleveringen af pakken med fra pakkeshoppen, da det er din dokumentation for, at du har sendt pakken korrekt retur. </p>
+</section>
+    </article>
+   </main>
+
+   <!-- Footer starter her -->
+
+<footer>
+    <section>
+    <h1>Nike Pro Shop Stores</h1>
+    <div class="mini-header">
+    <p>København</p>
+</div>
+<ul>
+    <li>Rådhusstræde 6, st.</li>
+    <li>1466 København K</li>
+</ul>
+    <div class="mini-header">
+    <p>Aarhus</p>
+</div>
+<ul>
+    <li>Søndergade 70</li>
+    <li>8000 Aarhus</li>
+</ul>
+    <div class="mini-header">
+    <p>Odense</p>
+</div>
+<ul>
+    <li>Vestergade 23</li>
+    <li>5000 Odense</li>
+</ul>
+</section>
+<section>
+    <h2>Åbningstider:</h2>
+    <ul>
+        <li>Mandag - fredag: 10:00 - 18:00</li>
+        <li>Lørdag: 10:00 - 13:00</li>
+    </ul>
+    <ul class="ulA">
+        <li>Telefon: (+45) 33 91 18 18</li>
+        <li>E-mail: online@NikeProShop.dk</li>
+    </ul>
+</section>
+<section class="sectionC">
+    <h3>Nike Pro Shop på de sociale medier:</h3>
+    <div class="img-container">
+        <div>
+       <img src="./Img/FacebookIcon.png" alt="Facebook" width="80%"> 
+    </div>
+    <div>
+       <img src="./Img/InstagramIcon.png" alt="Instagram" width="80%"> 
+    </div>
+    <div>
+       <img src="./Img/TwitterIcon.png" alt="Twitter" width="80%"> 
+    </div>
+</div>
+<div class="bottom">
+    <a href="./Kontakt.html" target="_blank" rel="noopener noreferrer">Kontakt</a>
+           <a href="./Om.html" target="_blank" rel="noopener noreferrer">Om Nike Pro Shop</a>
+        </div>
+</section>
+</footer>
+    
+</body>
+</html>
